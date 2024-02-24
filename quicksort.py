@@ -1,16 +1,5 @@
 import random
 
-# A dictionary of test cases for the quick sort algorithm
-tests = {
-    "nums_unsorted": [9, 8, 7, 6, 5, 4, 3, 2, 1, 0],
-    "nums_sorted": [i for i in range(10)],
-    "nums_random_all_positive": [random.randint(0, 10) for i in range(10)],
-    "nums_random_very_large": [random.randint(0, 1000) for i in range(5000)],
-    "nums_empty": [],
-    "nums_one_element": [1],
-    "nums_negative_only": [random.randint(-10, 0) for i in range(10)],
-    "nums_mixed_pos_neg": [random.randint(-1000, 1000) for i in range(10)]
-}
 
 def quick_sort(list_of_numbers):
     """
@@ -36,6 +25,19 @@ def quick_sort(list_of_numbers):
         sorted_list = quick_sort(less_than_pivot) + [pivot_num] + quick_sort(greater_than_pivot)
 
     return sorted_list
+
+
+# A dictionary of test cases for the quick sort algorithm
+tests = {
+    "nums_unsorted": [9, 8, 7, 6, 5, 4, 3, 2, 1, 0],
+    "nums_sorted": [i for i in range(10)],
+    "nums_random_all_positive": [random.randint(0, 10) for i in range(10)],
+    "nums_random_very_large": [random.randint(0, 1000) for i in range(5000)],
+    "nums_empty": [],
+    "nums_one_element": [1],
+    "nums_negative_only": [random.randint(-10, 0) for i in range(10)],
+    "nums_mixed_pos_neg": [random.randint(-1000, 1000) for i in range(10)]
+}
 
 
 # check tests and prints results with input, output, and expected output
